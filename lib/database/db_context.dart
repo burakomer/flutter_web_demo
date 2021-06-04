@@ -1,11 +1,10 @@
 import 'dart:convert';
-import 'dart:io';
-
-import 'package:flutter_web_demo/models/customer.dart';
-import 'package:flutter_web_demo/models/order.dart';
-import 'package:flutter_web_demo/models/order_detail.dart';
-import 'package:flutter_web_demo/models/product.dart';
 import 'package:http/http.dart' as http;
+
+import '/models/customer.dart';
+import '/models/order.dart';
+import '/models/order_detail.dart';
+import '/models/product.dart';
 
 class DbContext {
   static const BaseUrl = "http://localhost:80/demo";

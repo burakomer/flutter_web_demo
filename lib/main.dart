@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_demo/database/db_context.dart';
-import 'package:flutter_web_demo/widgets/pages/base/data_page.dart';
 
+import 'widgets/pages/home_page.dart';
+import 'widgets/pages/base/data_page.dart';
+import 'database/db_context.dart';
 import 'models/customer.dart';
 import 'models/order.dart';
 import 'models/product.dart';
-import 'widgets/pages/home_page.dart';
 
 void main() {
   runApp(MyApp());

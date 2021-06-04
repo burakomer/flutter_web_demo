@@ -1,5 +1,4 @@
-import 'package:flutter_web_demo/models/db_model.dart';
-
+import 'db_model.dart';
 import 'product.dart';
 
 class OrderDetail with DbModel {

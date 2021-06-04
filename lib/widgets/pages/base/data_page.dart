@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_demo/models/db_model.dart';
+
+import '/models/db_model.dart';
 
 import 'base_page.dart';
 
