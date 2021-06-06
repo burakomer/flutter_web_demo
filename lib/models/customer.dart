@@ -7,8 +7,9 @@ class Customer with DbModel {
   DateTime registerDate;
   String address;
 
-  Customer(
-      this.id, this.firstName, this.lastName, this.registerDate, this.address);
+  String get fullName => firstName + ' ' + lastName;
+
+  Customer(this.id, this.firstName, this.lastName, this.registerDate, this.address);
 
   factory Customer.fromJson(Map<String, dynamic> map) {
     return Customer(int.parse(map['id']), map['firstname'], map['lastname'],
@@ -22,4 +23,10 @@ class Customer with DbModel {
         'registerdate': registerDate.toString(),
         'address': address
       };
+
+  @override
+  bool operator ==(Object other) => other is Customer && other.id == id;
+
+  @override
+  int get hashCode => id.hashCode;
 }

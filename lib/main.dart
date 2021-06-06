@@ -6,6 +6,7 @@ import 'database/db_context.dart';
 import 'models/customer.dart';
 import 'models/order.dart';
 import 'models/product.dart';
+import 'widgets/pages/order/create_order_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,20 +21,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => MyHomePage(title: 'Home'),
         '/customers': (context) => DataPage<Customer>(
               title: 'Customers',
-              loadData: DbContext.getCustomers(),
+              getData: DbContext.getCustomers,
             ),
         '/products': (context) => DataPage<Product>(
               title: 'Products',
-              loadData: DbContext.getProducts(),
+              getData: DbContext.getProducts,
             ),
-        '/orders': (context) => DataPage<Order>(
-              title: 'Orders',
-              loadData: DbContext.getOrders(),
-            ),
+        '/orders': (context) =>
+            DataPage<Order>(title: 'Orders', getData: DbContext.getOrders, createData: true),
+        '/orders/create': (context) => CreateOrderPage(),
       },
     );
   }

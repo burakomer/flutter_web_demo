@@ -13,10 +13,20 @@ abstract class BaseState<T extends BasePage> extends State<T> {
         title: Text(
           widget.title,
         ),
+        actions: barActions(),
       ),
       body: body(),
+      floatingActionButton: floatingButton(),
     );
   }
 
   Widget body();
+
+  List<Widget>? barActions() {
+    return null;
+  }
+
+  Widget? floatingButton() {
+    return null;
+  }
 }

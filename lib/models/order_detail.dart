@@ -10,13 +10,12 @@ class OrderDetail with DbModel {
   OrderDetail(this.id, this.quantity, this.product);
 
   factory OrderDetail.fromJson(Map<String, dynamic> json, Product product) {
-    return OrderDetail(json['id'] as int, json['quantity'] as int, product);
+    return OrderDetail(int.parse(json['id']), int.parse(json['quantity']), product);
   }
 
   @override
   Map<String, dynamic> toJson() => {
-        'id': id.toString(),
-        'quantity': quantity.toString(),
         'product': product.toJson(),
+        'quantity': quantity.toString(),
       };
 }
