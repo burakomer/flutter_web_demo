@@ -8,7 +8,7 @@ import '/models/order_detail.dart';
 import '/models/product.dart';
 
 class DbContext {
-  static const BaseUrl = "http://localhost:80/demo";
+  static const BaseUrl = "http://localhost:80/dbserver";
 
   // Database Interaction Code
 
